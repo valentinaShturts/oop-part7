@@ -1,0 +1,45 @@
+#pragma once
+class Point
+{
+	int x;
+	int y;
+public:
+	Point() = default;
+	Point(int a, int b);
+	void Init(int a, int b);
+	void Print() const;
+	Point Sum(Point b) const;
+	int Sum(int b) const;
+	//Преобразовуем наши методы в операции
+	Point operator+(Point b);
+	int operator+(int b);
+
+	//самостоятельное
+	Point operator-(Point b);
+	int operator*(int b);
+	Point operator*(Point b);
+
+	//Перегрузка унарных операций
+	Point& operator++();
+	Point& operator--();
+
+	Point operator++(int);
+	Point operator--(int);
+	Point& operator+=(int b);
+	Point& operator+=(Point b);
+	Point& operator-=(int b);
+	Point& operator-=(Point b);
+	Point& operator*=(int b);
+	Point& operator*=(Point b);
+	Point& operator/=(int b);
+	Point& operator/=(Point b);
+
+	bool operator>(Point b);
+	bool operator>=(Point b);
+	bool operator==(Point b);
+	bool operator<(Point b);
+	bool operator<=(Point b);
+	bool operator!=(Point b);
+
+};
+

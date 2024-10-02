@@ -1,0 +1,22 @@
+#include "Point (1).h"
+#include <iostream>
+using namespace std;
+
+int main()
+{	
+	Point a(1, 2);
+	Point b(3, 4);	
+	a++;
+	a.Print();
+	b--;
+	b.Print();
+
+	a -= 5;
+	a.Print();
+	a += 2;
+	a.Print();
+	a *= 2;
+	a.Print();
+	a /= 2;
+	a.Print();
+}
